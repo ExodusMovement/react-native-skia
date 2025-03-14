@@ -24,6 +24,10 @@ jobs:
           download_skia: 'false'
           github_token: ${{ secrets.GITHUB_TOKEN }}
 
+      - name: Set up deterministic build environment
+        run: |
+          export ZERO_AR_DATE=1
+
       - name: Build Skia
         working-directory: ./packages/skia
         env:
