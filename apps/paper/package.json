@@ -15,12 +15,12 @@
     "mkdist": "node -e \"require('node:fs').mkdirSync('dist', { recursive: true, mode: 0o755 })\""
   },
   "dependencies": {
+    "@exodus/react-native-skia": "workspace:*",
     "@react-native-community/slider": "^4.5.2",
     "@react-navigation/bottom-tabs": "^6.6.1",
     "@react-navigation/elements": "^1.3.31",
     "@react-navigation/native": "^6.1.17",
     "@react-navigation/native-stack": "^6.10.0",
-    "@exodus/react-native-skia": "workspace:*",
     "@testing-library/react-native": "^12.6.1",
     "babel-plugin-transform-inline-environment-variables": "^0.4.4",
     "cdt2d": "^1.0.0",
