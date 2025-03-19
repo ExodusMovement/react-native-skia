@@ -4781,9 +4781,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@shopify/react-native-skia@workspace:*, @shopify/react-native-skia@workspace:packages/skia":
+"@exodus/react-native-skia@workspace:*, @exodus/react-native-skia@workspace:packages/skia":
   version: 0.0.0-use.local
-  resolution: "@shopify/react-native-skia@workspace:packages/skia"
+  resolution: "@exodus/react-native-skia@workspace:packages/skia"
   dependencies:
     "@babel/plugin-proposal-nullish-coalescing-operator": 7.18.6
     "@semantic-release/commit-analyzer": ^13.0.0
@@ -9473,7 +9473,7 @@ __metadata:
     "@docusaurus/module-type-aliases": 2.4.3
     "@docusaurus/preset-classic": 2.4.3
     "@mdx-js/react": ^1.6.21
-    "@shopify/react-native-skia": "workspace:*"
+    "@exodus/react-native-skia": "workspace:*"
     "@svgr/webpack": ^5.5.0
     "@tsconfig/docusaurus": ^1.0.4
     clsx: ^1.1.1
@@ -10933,7 +10933,7 @@ __metadata:
     "@react-navigation/elements": ^1.3.31
     "@react-navigation/native": ^6.1.17
     "@react-navigation/native-stack": ^6.10.0
-    "@shopify/react-native-skia": "workspace:*"
+    "@exodus/react-native-skia": "workspace:*"
     "@testing-library/react-native": ^12.6.1
     "@types/react": ^18.2.6
     "@types/react-test-renderer": ^18.0.0
@@ -12302,7 +12302,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "headless-skia@workspace:apps/headless"
   dependencies:
-    "@shopify/react-native-skia": "workspace:*"
+    "@exodus/react-native-skia": "workspace:*"
     eslint: ^9.19.0
     eslint-config-react-native-wcandillon: ^3.10.2
     react: ^18.0.0
@@ -16942,7 +16942,7 @@ __metadata:
     "@react-navigation/elements": ^1.3.31
     "@react-navigation/native": ^6.1.17
     "@react-navigation/native-stack": ^6.10.0
-    "@shopify/react-native-skia": "workspace:*"
+    "@exodus/react-native-skia": "workspace:*"
     "@testing-library/react-native": ^12.6.1
     "@types/react": ^18.2.6
     "@types/react-test-renderer": ^18.0.0
@@ -19171,7 +19171,7 @@ __metadata:
     "@babel/preset-flow": ^7.25.9
     "@babel/preset-typescript": ^7.18.6
     "@remotion/cli": 4.0.244
-    "@shopify/react-native-skia": "workspace:*"
+    "@exodus/react-native-skia": "workspace:*"
     "@types/color": ^3.0.6
     "@types/jest": ^29.2.2
     "@types/lodash": ^4.14.182

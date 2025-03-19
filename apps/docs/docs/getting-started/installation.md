@@ -23,13 +23,13 @@ For Graphite to run, you will need to use `Android API level 26` and `iOS 15.1` 
 **Install the library using yarn:**
 
 ```sh
-yarn add @shopify/react-native-skia
+yarn add @exodus/react-native-skia
 ```
 
 **Or using npm:**
 
 ```sh
-npm install @shopify/react-native-skia
+npm install @exodus/react-native-skia
 ```
 
 ### Bundle Size
@@ -95,7 +95,7 @@ React Native Skia test mocks use a web implementation that depends on loading Ca
 The very first step is to make sure that your Skia files are not being transformed by jest, for instance, we can add it the `transformIgnorePatterns` directive:
 ```js
 "transformIgnorePatterns": [
-  "node_modules/(?!(react-native|react-native.*|@react-native.*|@?react-navigation.*|@shopify/react-native-skia)/)"
+  "node_modules/(?!(react-native|react-native.*|@react-native.*|@?react-navigation.*|@exodus/react-native-skia)/)"
 ]
 ```
 
@@ -108,7 +108,7 @@ To load CanvasKit and subsequently the React Native Skia mock, add the following
 
 ```js
 // notice the extension: .mjs
-"setupFiles": ["@shopify/react-native-skia/jestSetup.mjs"]
+"setupFiles": ["@exodus/react-native-skia/jestSetup.mjs"]
 ```
 
 ### CommonJS Setup
@@ -117,14 +117,14 @@ We also offer a version of the setup file without ECMAScript modules support. To
 
 ```js
 // notice the extension: .js
-"setupFiles": ["@shopify/react-native-skia/jestSetup.js"]
+"setupFiles": ["@exodus/react-native-skia/jestSetup.js"]
 ```
 
 With this setup, you need to load the Skia environment in your test. Include the following at the top of your test file:
 
 ```js
 /**
- * @jest-environment @shopify/react-native-skia/jestEnv.mjs
+ * @jest-environment @exodus/react-native-skia/jestEnv.mjs
  */
 ```
 
@@ -132,7 +132,7 @@ For instance:
 
 ```js
 /**
- * @jest-environment @shopify/react-native-skia/jestEnv.mjs
+ * @jest-environment @exodus/react-native-skia/jestEnv.mjs
  */
 import "react-native";
 import React from "react";

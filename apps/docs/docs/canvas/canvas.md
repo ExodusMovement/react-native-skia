@@ -34,7 +34,7 @@ If your drawing does not contain textures, you may also use the synchronous `mak
 
 ```tsx twoslash
 import {useEffect} from "react";
-import {Canvas, useCanvasRef, Circle} from "@shopify/react-native-skia";
+import {Canvas, useCanvasRef, Circle} from "@exodus/react-native-skia";
 
 export const Demo = () => {
   const ref = useCanvasRef();
@@ -70,7 +70,7 @@ This is the same recipe used for [applying gestures on specific canvas elements]
 It is also possible directly possible to get an image directly from a drawing using `drawAsImage`.
 
 ```tsx twoslash
-import {drawAsImage, Circle, Canvas, Image} from "@shopify/react-native-skia";
+import {drawAsImage, Circle, Canvas, Image} from "@exodus/react-native-skia";
 
 const width = 256;
 const height = 256;
@@ -94,7 +94,7 @@ export const Demo = () => {
 The offscreen drawing can also be done directly with the canvas API.
 
 ```tsx twoslash
-import {Skia, Circle, Canvas, Image} from "@shopify/react-native-skia";
+import {Skia, Circle, Canvas, Image} from "@exodus/react-native-skia";
 
 const width = 256;
 const height = 256;

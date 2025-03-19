@@ -1,7 +1,7 @@
 import type { ReactChild, ReactFragment, ReactPortal } from "react";
 import React, { Children } from "react";
 import { ScrollView } from "react-native";
-import { Canvas } from "@shopify/react-native-skia";
+import { Canvas } from "@exodus/react-native-skia";
 
 import { ExportableCanvas } from "../../../components/ExportableCanvas";
 
