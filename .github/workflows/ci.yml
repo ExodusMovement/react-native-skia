@@ -2,10 +2,10 @@ name: CI
 on:
   push:
     branches:
-      - main
+      - exodus-fork
   pull_request:
     branches:
-      - main
+      - exodus-fork
   merge_group:
     types:
       - checks_requested
