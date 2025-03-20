@@ -1,5 +1,6 @@
 {
   "branches": [
+    "main",
     {
       "name": "exodus-fork",
       "prerelease": "rc"
