@@ -471,6 +471,7 @@ return surface.makeImageSnapshot().encodeToBase64();
   ): Promise<R> {
     return new Promise((resolve) => {
       this.client.once("message", (raw: Buffer) => {
+        console.log("response", raw.toString('hex'));
         resolve(json ? JSON.parse(raw.toString()) : this.decodeImage(raw));
       });
       this.client.send(body);
