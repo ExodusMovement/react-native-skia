@@ -89,8 +89,11 @@ describe("FontMgr", () => {
     const width = await surface.eval(
       (Skia, { fontStyle, familyName }) => {
         const fontMgr = Skia.FontMgr.System();
+        console.log(fontMgr)
         const typeface = fontMgr.matchFamilyStyle(familyName, fontStyle.Normal);
+        console.log(typeface)
         const font = Skia.Font(typeface, 10);
+        console.log(font)
         return font.getGlyphIDs("😉😍");
       },
       { fontStyle: FontStyle, familyName: fontName }
