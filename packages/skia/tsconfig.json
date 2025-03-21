@@ -5,7 +5,9 @@
       "dom",
       "es2019"
     ],
-    "noEmit": true,
+    "noEmit": false,
+    "declaration": true,
+    "outDir": "lib",
     "allowJs": true,
     "skipLibCheck": true,
     "allowSyntheticDefaultImports": true,
@@ -29,6 +31,7 @@
     "noImplicitThis": true, /* Raise error on 'this' expressions with an implied 'any' type. */
     "alwaysStrict": true, /* Parse in strict mode and emit "use strict" for each source file. */
   },
+  "include": ["src"],
   "exclude": [
     "node_modules",
     "babel.config.js",
