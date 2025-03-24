@@ -45,8 +45,8 @@ import {
   isDrawCommand,
   isGroup,
   materializeProps,
-  type Command,
 } from "./Core";
+import type { Command } from "./Core";
 import type { DrawingContext } from "./DrawingContext";
 
 function play(ctx: DrawingContext, command: Command) {
