@@ -11,7 +11,7 @@
   "version": "0.0.0",
   "description": "High-performance React Native Graphics using Skia",
   "main": "lib/index.js",
-  "react-native": "lib/index.js",
+  "react-native": "src/index.ts",
   "module": "lib/index.js",
   "types": "lib/index.d.ts",
   "files": [
