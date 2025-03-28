@@ -4,6 +4,9 @@
     "access": "restricted",
     "provenance": false
   },
+  "bin": {
+    "setup-skia-web": "./scripts/setup-canvaskit.js"
+  },
   "title": "React Native Skia",
   "version": "0.0.0",
   "description": "High-performance React Native Graphics using Skia",
