@@ -33,7 +33,6 @@
     "ios/**",
     "libs/apple/*.xcframework/**",
     "react-native-skia.podspec",
-    "scripts/setup-canvaskit.js",
     "dist/**",
     "!**/__tests__/**"
   ],
