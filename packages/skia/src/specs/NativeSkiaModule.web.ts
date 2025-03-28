@@ -9,7 +9,7 @@ export type ISkiaViewApiWeb = ISkiaViewApi & {
 };
 
 global.SkiaViewApi = {
-  views: {},
+  views: Object.create(null),
   web: true,
   registerView(nativeId: string, view: SkiaPictureView) {
     this.views[nativeId] = view;
