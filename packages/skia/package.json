@@ -58,17 +58,7 @@
   "keywords": [
     "react-native"
   ],
-  "author": "Shopify Inc.",
-  "contributors": [
-    {
-      "name": "Christian Falch",
-      "email": "christian.falch@gmail.com"
-    },
-    {
-      "name": "William Candillon",
-      "email": "wcandillon@gmail.com"
-    }
-  ],
+  "author": "Exodus Movement, Inc.",
   "license": "MIT",
   "licenseFilename": "LICENSE.md",
   "readmeFilename": "README.md",
