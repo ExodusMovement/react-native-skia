@@ -29,13 +29,17 @@ jobs:
       - name: Build package and documentation
         run: yarn build
 
+      - name: Configure npm for private packages
+        run: echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}" >> ~/.npmrc
+
       - name: Semantic Release (version & changelog)
         working-directory: packages/skia
-        run: |
-          yarn release
+        run: yarn release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Publish to npm
+      - name: Publish to npm with OIDC
         working-directory: packages/skia
-        run: npm publish --access restricted
+        run: |
+          rm -f ~/.npmrc
+          npm publish --provenance --access restricted
