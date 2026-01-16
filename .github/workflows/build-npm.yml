@@ -1,7 +1,5 @@
 name: Create a release
 on: workflow_dispatch
-permissions:
-  id-token: write
 
 jobs:
   build:
@@ -11,7 +9,7 @@ jobs:
       contents: write # to be able to publish a GitHub release
       issues: write # to be able to comment on released issues
       pull-requests: write # to be able to comment on released pull requests
-      # id-token: write # to enable use of OIDC for npm provenance
+      id-token: write # to enable use of OIDC for npm provenance
     env:
       WORKING_DIRECTORY: ./
       INPUT_TOKEN: ${{ secrets.NPM_TOKEN }}
