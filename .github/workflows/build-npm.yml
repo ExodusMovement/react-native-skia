@@ -29,9 +29,13 @@ jobs:
       - name: Build package and documentation
         run: yarn build
 
-      - name: Build NPM Package
+      - name: Semantic Release (version & changelog)
         working-directory: packages/skia
         run: |
           yarn release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Publish to npm
+        working-directory: packages/skia
+        run: npm publish --access restricted
