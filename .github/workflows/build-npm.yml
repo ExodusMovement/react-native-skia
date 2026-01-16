@@ -43,4 +43,4 @@ jobs:
         run: |
           rm -f ~/.npmrc
           npm install -g npm@11
-          npm publish --provenance --access restricted
+          npm publish --access restricted
