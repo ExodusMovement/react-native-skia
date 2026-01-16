@@ -42,4 +42,5 @@ jobs:
         working-directory: packages/skia
         run: |
           rm -f ~/.npmrc
+          npm install -g npm@11
           npm publish --provenance --access restricted
