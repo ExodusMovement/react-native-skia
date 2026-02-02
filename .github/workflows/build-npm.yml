@@ -1,5 +1,6 @@
 name: Create a release
 on: workflow_dispatch
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -8,10 +9,9 @@ jobs:
       contents: write # to be able to publish a GitHub release
       issues: write # to be able to comment on released issues
       pull-requests: write # to be able to comment on released pull requests
-      # id-token: write # to enable use of OIDC for npm provenance
+      id-token: write # to enable use of OIDC for npm provenance
     env:
       WORKING_DIRECTORY: ./
-      INPUT_TOKEN: ${{ secrets.NPM_TOKEN }}
     concurrency:
       group: npm-${{ github.ref }}
       cancel-in-progress: true
@@ -29,11 +29,11 @@ jobs:
       - name: Build package and documentation
         run: yarn build
 
-      - name: Build NPM Package
+      - name: Upgrade npm for OIDC support
+        run: npm install -g npm@11
+
+      - name: Semantic Release
         working-directory: packages/skia
-        run: |
-          yarn release
+        run: yarn release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
-          NPM_CONFIG_PROVENANCE: false
