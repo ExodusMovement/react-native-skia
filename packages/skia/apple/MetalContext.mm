@@ -31,4 +31,13 @@ MetalContext::MetalContext() {
   if (_directContext == nullptr) {
     RNSkia::RNSkLogger::logToConsole("Couldn't create a Skia Metal Context");
   }
+
+#if !TARGET_OS_OSX
+  if (@available(iOS 10.0, *)) {
+    if ([UIScreen mainScreen].traitCollection.displayGamut == UIDisplayGamutP3) {
+      _wideColorSpace = SkColorSpace::MakeRGB(SkNamedTransferFn::kSRGB,
+                                               SkNamedGamut::kDisplayP3);
+    }
+  }
+#endif
 }
