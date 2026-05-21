@@ -1,15 +1,14 @@
 {
-  "name": "@shopify/react-native-skia",
+  "name": "@exodus/react-native-skia",
   "publishConfig": {
-    "access": "public",
-    "provenance": true
+    "access": "restricted"
   },
   "bin": {
     "install-skia": "scripts/install-libs.js",
     "setup-skia-web": "scripts/setup-canvaskit.js"
   },
   "title": "React Native Skia",
-  "version": "0.0.0",
+  "version": "2.6.2-exodus.1",
   "description": "High-performance React Native Graphics using Skia",
   "main": "lib/module/index.js",
   "react-native": "src/index.ts",
@@ -58,8 +57,8 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Shopify/react-native-skia.git",
-    "baseUrl": "https://github.com/Shopify/react-native-skia"
+    "url": "git+https://github.com/ExodusForks/react-native-skia.git",
+    "baseUrl": "https://github.com/ExodusForks/react-native-skia"
   },
   "keywords": [
     "react-native"

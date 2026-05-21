@@ -24,12 +24,6 @@ void JsiHostObject::set(jsi::Runtime &rt, const jsi::PropNameID &name,
   }
 }
 
-jsi::Value eval(jsi::Runtime &runtime, const std::string &js) {
-  return runtime.global()
-      .getPropertyAsFunction(runtime, "eval")
-      .call(runtime, js);
-}
-
 jsi::Value JsiHostObject::get(jsi::Runtime &runtime,
                               const jsi::PropNameID &name) {
   auto nameStr = name.utf8(runtime);
@@ -83,10 +77,18 @@ jsi::Value JsiHostObject::get(jsi::Runtime &runtime,
     return (prop.get)(runtime);
   }
 
-  // Check for dispose symbol as last resort
+  // Check for dispose symbol as last resort.
+  // Note: avoid JS-level `eval` here — some Hermes builds (e.g. @exodus/hermes-engine
+  // V1) disable the eval builtin for security; calling it would throw and crash the
+  // app on the first JsiHostObject property miss. Resolve `Symbol.dispose` via direct
+  // JSI traversal of the global `Symbol.for` function instead.
   static const auto disposeSymbol = jsi::PropNameID::forSymbol(
       runtime,
-      eval(runtime, "Symbol.for('Symbol.dispose');").getSymbol(runtime));
+      runtime.global()
+          .getPropertyAsObject(runtime, "Symbol")
+          .getPropertyAsFunction(runtime, "for")
+          .call(runtime, "Symbol.dispose")
+          .getSymbol(runtime));
   if (jsi::PropNameID::compare(runtime, disposeSymbol, name)) {
     // Recursively call get with "dispose" string
     auto disposeName = jsi::PropNameID::forAscii(runtime, "dispose");

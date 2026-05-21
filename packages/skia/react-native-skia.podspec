@@ -48,9 +48,9 @@ Pod::Spec.new do |s|
   s.version      = package["version"]
   s.summary      = package["description"]
   s.description  = <<-DESC
-                  @shopify/react-native-skia
+                  @exodus/react-native-skia
                    DESC
-  s.homepage     = "https://github.com/shopify/react-native-skia"
+  s.homepage     = "https://github.com/ExodusForks/react-native-skia"
   s.license      = "MIT"
   s.license    = { :type => "MIT", :file => "LICENSE.md" }
   s.authors      = {
@@ -58,7 +58,7 @@ Pod::Spec.new do |s|
     "William Candillon" => "wcandillon@gmail.com"
   }
   s.platforms    = { :ios => "14.0", :tvos => "13.0", :osx => "11" }
-  s.source       = { :git => "https://github.com/shopify/react-native-skia/react-native-skia.git", :tag => "#{s.version}" }
+  s.source       = { :git => "https://github.com/ExodusForks/react-native-skia.git", :tag => "#{s.version}" }
 
   s.requires_arc = true
   s.pod_target_xcconfig = {

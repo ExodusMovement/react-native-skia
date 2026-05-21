@@ -10,9 +10,9 @@ export type ISkiaViewApiWeb = ISkiaViewApi & {
 };
 
 global.SkiaViewApi = {
-  views: {},
-  deferedPictures: {},
-  deferedOnSize: {},
+  views: Object.create(null),
+  deferedPictures: Object.create(null),
+  deferedOnSize: Object.create(null),
   web: true,
   registerView(nativeId: string, view: SkiaPictureViewHandle) {
     // Maybe a picture for this view was already set
